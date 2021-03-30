@@ -1,11 +1,17 @@
 import { add } from "../src/code-signal-challenge/intro/calc";
 
 describe("test calc function", () => {
-    it("should return 15 for calc(10,5)", () => {
-      expect(add(10, 5)).toBe(15);
-    });
+    const max = 1000;
+    const min = max * -1;
+    const attempts = 5;
+    let i: number;
 
-    it("should return 5 for calc(2,3)", () => {
-      expect(add(2, 3)).toBe(5);
-    });
+    for(i = 0; i < attempts; i++) {
+        let num1 = Math.floor(Math.random() * (max - min + 1)) + min;
+        let num2 = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        it(`return \t ${num1 + num2} \t for \t add(${num1}, ${num2})`, () => {
+            expect(add(num1, num2)).toBe(num1 + num2);
+        });
+    }
   });
