@@ -1,3 +1,5 @@
+src/**/*.js
+
 lib-cov
 *.seed
 *.log
