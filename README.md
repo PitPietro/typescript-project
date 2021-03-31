@@ -14,6 +14,22 @@ Now, start committing on your feature. When done, use:
 
      git flow feature finish code-signal-arcade
 
+# make a commit and push
+$ git push --set-upstream origin feature/code-signal-arcade
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.27 KiB | 1.27 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature/code-signal-arcade' on GitHub by visiting:
+remote:      https://github.com/PitPietro/typescript-project/pull/new/feature/code-signal-arcade
+remote: 
+To https://github.com/PitPietro/typescript-project.git
+ * [new branch]      feature/code-signal-arcade -> feature/code-signal-arcade
+Branch 'feature/code-signal-arcade' set up to track remote branch 'feature/code-signal-arcade' from 'origin'.
 ```
 
 ## Install dependencies
