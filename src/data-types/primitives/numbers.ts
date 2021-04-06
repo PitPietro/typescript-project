@@ -15,21 +15,46 @@ export function differentFormats() {
 }
 
 /*
-numObj.toExponential([fractionDigits])
+toExponential(fractionDigits?: number): string;
 
 Returns a string containing a number represented in exponential notation.
-'fractionDigits' is the number of digits after the decimal point. Must be in the range 0 (if not inserted) - 20, inclusive.
+'fractionDigits' is the number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
 */
 export function exponentialNumber(num: number, fractionDigits?: number): string {
     return num.toExponential(fractionDigits);
 }
 
 /*
-numObj.toFixed([digits])
+toFixed(fractionDigits?: number): string;
 
-The toFixed method returns the fixed-point notation of a number in string format.
-This function has one optional argument, an integer specifying the number of digits after the decimal point. It returns a string representation of the formatted number.
+Returns a string representing a number in fixed-point notation.
+'fractionDigits' is the number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
 */
 export function fixedNumber(num: number, fractionDigits?: number): string {
     return num.toFixed(fractionDigits);
+}
+
+/*
+toLocaleString(locales?: string | string[], options?: Intl.NumberFormatOptions): string;
+
+Converts a number to a string by using the current or specified locale.
+
+'locales' – A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+'options' – An object that contains one or more properties that specify comparison options.
+
+ */
+export function toLocaleStringFromNumber(num: Date, locales?: string | string[]): string {
+    return num.toLocaleString(locales);
+}
+
+/*
+toString(radix?: number): string;
+
+Returns a string representation of an object.
+'radix' – Specifies a radix for converting numeric values to strings. This value is only used for numbers.
+
+Note: The radix value should be between 2 and 36.
+ */
+export function toStringNumber(num: number, radix?: number): string {
+    return num.toString(radix);
 }
