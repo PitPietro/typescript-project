@@ -1,21 +1,23 @@
 import {differentFormats, exponentialNumber, fixedNumber, toStringNumber} from "./numbers";
 
-let i: number;
-let nExp = 150985;
-let nFix = 15.0985;
+console.log('\n~~~ Numbers ~~~\n');
 
-
+console.log('\n~~~ formats');
 differentFormats();
 
+console.log('\n~~~ toExponential()');
+let nExp = 150985;
 console.log(exponentialNumber(nExp));
 
-for(i = 1; i < 5; i++) {
+for (let i = 1; i < 5; i++) {
     console.log(exponentialNumber(nExp, i));
 }
 
+console.log('\n~~~ toFixed()');
+let nFix = 15.0985;
 console.log(fixedNumber(nFix));
 
-for(i = 1; i < 5; i++) {
+for (let i = 1; i < 5; i++) {
     console.log(fixedNumber(nFix, i));
 }
 
@@ -75,7 +77,7 @@ console.log('\n~~~ toString()');
 let myNum: number = 186;
 let radixes: number[] = [2, 4, 8, 16];
 
-for(let i = 0; i < radixes.length; i++) {
+for (let i = 0; i < radixes.length; i++) {
     console.log(`${myNum} toString: ${toStringNumber(myNum, radixes[i])} \twith radix = ${radixes[i]}`);
 }
 
