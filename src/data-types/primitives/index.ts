@@ -92,4 +92,13 @@ console.log(numValueOf) //Output: 456
 console.log(typeof numValueOf) //Output: number
 
 
+console.log('\n~~~ Strings ~~~\n');
+console.log('\n~~~ charAt()');
+console.log('\n~~~ concat()');
+console.log('\n~~~ replace()');
+console.log('\n~~~ split()');
+console.log('\n~~~ toUpperCase()');
+console.log('\n~~~ toLowerCase()');
+
+
 // tsc numbers.ts index.ts && node index.js
