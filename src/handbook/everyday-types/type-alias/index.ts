@@ -1,10 +1,10 @@
-type Person = {
+type PersonType = {
     firstName: string,
     lastName: string,
     age: number
 }
 
-function printPersonWithType(person: Person) {
+function printPersonWithType(person: PersonType) {
     console.log(`${person.firstName} ${person.lastName} is ${person.age} years old.`);
 }
 
