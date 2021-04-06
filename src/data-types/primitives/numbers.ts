@@ -58,3 +58,10 @@ Note: The radix value should be between 2 and 36.
 export function toStringNumber(num: number, radix?: number): string {
     return num.toString(radix);
 }
+
+/*
+Returns the primitive value of the specified object
+ */
+export function valueOfNumber(num: number): number {
+    return num.valueOf();
+}

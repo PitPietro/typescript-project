@@ -1,4 +1,4 @@
-import {differentFormats, exponentialNumber, fixedNumber, toStringNumber} from "./numbers";
+import {differentFormats, exponentialNumber, fixedNumber, toStringNumber, valueOfNumber} from "./numbers";
 
 console.log('\n~~~ Numbers ~~~\n');
 
@@ -80,6 +80,16 @@ let radixes: number[] = [2, 4, 8, 16];
 for (let i = 0; i < radixes.length; i++) {
     console.log(`${myNum} toString: ${toStringNumber(myNum, radixes[i])} \twith radix = ${radixes[i]}`);
 }
+
+console.log('\n~~~ valueOf()');
+
+let numberObject = Number(456);
+console.log(numberObject) //a number object with value 456
+console.log(numberObject.valueOf()) // 456
+console.log(typeof myNum) //Output: object
+let numValueOf = valueOfNumber(myNum);
+console.log(numValueOf) //Output: 456
+console.log(typeof numValueOf) //Output: number
 
 
 // tsc numbers.ts index.ts && node index.js
