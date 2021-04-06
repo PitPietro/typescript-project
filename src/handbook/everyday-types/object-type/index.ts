@@ -1,4 +1,4 @@
-function printPerson(person: {firstName: String, lastName: string, age: number}) {
+function printPerson(person: {firstName: string, lastName: string, age: number}) {
     console.log(`${person.firstName} ${person.lastName} is ${person.age} years old.`);
 }
 
