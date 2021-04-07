@@ -12,29 +12,26 @@ printPersonWithInterface({firstName: "Mike", lastName: "Popper", age: 45});
 
 // extend an interface
 
-interface Animal {
+interface AnimalInterface {
     name: string
 }
 
-interface Cat extends Animal {
+interface CatInterface extends AnimalInterface {
     longHaired: boolean
 }
 
-function getCat() {
-    const myCat: Cat = {name: "Bobby", longHaired:true};
+function getCatInterface() {
+    const myCat: CatInterface = {name: "Bobby", longHaired:true};
     return myCat;
 }
 
-function printCat(myCat: Cat) {
+function printCatInterface(myCat: CatInterface) {
     console.log(`Is ${myCat.name} long haired? ${myCat.longHaired}`)
 }
 
-const myPet = getCat()
+const myPet = getCatInterface()
 
-printCat(myPet);
-
-myPet.name
-myPet.longHaired
+printCatInterface(myPet);
 
 
 // cd src/handbook/everyday-types/interface

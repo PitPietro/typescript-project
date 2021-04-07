@@ -20,6 +20,29 @@ function printAgeWithType(age: Age) {
     }
 }
 
+// extend a Type
+
+type AnimalType = {
+    name: string
+}
+
+type CatType = AnimalType & {
+    longHaired: boolean
+}
+
+function getCat() {
+    const myCat: CatType = {name: "Bobby", longHaired:true};
+    return myCat;
+}
+
+function printCat(myCat: CatType) {
+    console.log(`Is ${myCat.name} long haired? ${myCat.longHaired}`)
+}
+
+const myP = getCat();
+
+printCat(myP);
+
 printPersonWithType( {firstName: "Mike", lastName: "Popper", age: 45});
 
 printAgeWithType("45");

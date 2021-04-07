@@ -29,14 +29,26 @@ function sliceFromRange(element: number[] | string, first: number = 0, last: num
     console.log(element.slice(first, last));
 }
 
+// combine literals info unions
+function printDivPosition(id: number, position: "up" | "center" | "down") {
+    console.log(`ID = ${id} | position = ${position}`);
+}
+
+console.log('\n~~~ printAge()');
 printAge("45");
 printAge(23);
 
+console.log('\n~~~ welcomeColleagues()');
 welcomeColleagues("Mark");
 welcomeColleagues(["Mark", "Anne", "John", "Natalie"]);
 
+console.log('\n~~~ sliceFromRange()');
 sliceFromRange([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, 7);
 sliceFromRange("Goodbye");
 
+console.log('\n~~~ printDivPosition()');
+printDivPosition(23, "up");
+// printDivPosition(44, "hello");
+// Argument of type '"hello"' is not assignable to parameter of type '"up" | "center" | "down"'.
 // cd src/handbook/everyday-types/union-type-type
 // tsc index.ts && node index.js
