@@ -1,5 +1,5 @@
 function printAge(age: number | string) {
-    if(typeof age === "string") {
+    if (typeof age === "string") {
         // 'age' is of type 'string'
         console.log(age.toLowerCase());
     } else {
@@ -9,7 +9,7 @@ function printAge(age: number | string) {
 }
 
 function welcomeColleagues(mates: string[] | string) {
-    if(Array.isArray(mates)) {
+    if (Array.isArray(mates)) {
         // 'mates' is 'string[]'
         console.log(`Hello to:\n-\t${mates.join("\n-\t")}`);
     } else {
@@ -64,6 +64,19 @@ const tmp3 = "abcd";
 console.log(`is ${tmp1} equal to ${tmp1}?\t${compareString(tmp1, tmp1)}`);
 console.log(`is ${tmp1} equal to ${tmp2}?\t${compareString(tmp1, tmp2)}`);
 console.log(`is ${tmp1} equal to ${tmp3}?\t${compareString(tmp1, tmp3)}`);
+
+
+declare function handleRequest(url: string, method: "GET" | "POST"): void;
+
+const request = {url: "https://schema.org", method: "GET"} as const;
+handleRequest(request.url, request.method);
+
+function liveDangerously(x?: number | undefined) {
+    // No error
+    console.log(x!.toFixed());
+}
+
+liveDangerously();
 
 // cd src/handbook/everyday-types/union-type-type
 // tsc index.ts && node index.js
