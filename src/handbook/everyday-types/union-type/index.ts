@@ -34,6 +34,11 @@ function printDivPosition(id: number, position: "up" | "center" | "down") {
     console.log(`ID = ${id} | position = ${position}`);
 }
 
+// return -1, 0, or 1 based on the comparison of the string given as parameters
+function compareString(a: string, b: string): -1 | 0 | 1 {
+    return a === b ? 0 : a > b ? 1 : -1;
+}
+
 console.log('\n~~~ printAge()');
 printAge("45");
 printAge(23);
@@ -50,5 +55,15 @@ console.log('\n~~~ printDivPosition()');
 printDivPosition(23, "up");
 // printDivPosition(44, "hello");
 // Argument of type '"hello"' is not assignable to parameter of type '"up" | "center" | "down"'.
+
+console.log('\n~~~ compareString()');
+const tmp1 = "abc";
+const tmp2 = "ab";
+const tmp3 = "abcd";
+
+console.log(`is ${tmp1} equal to ${tmp1}?\t${compareString(tmp1, tmp1)}`);
+console.log(`is ${tmp1} equal to ${tmp2}?\t${compareString(tmp1, tmp2)}`);
+console.log(`is ${tmp1} equal to ${tmp3}?\t${compareString(tmp1, tmp3)}`);
+
 // cd src/handbook/everyday-types/union-type-type
 // tsc index.ts && node index.js
