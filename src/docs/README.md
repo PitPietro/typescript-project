@@ -18,4 +18,43 @@ JavaScript has a dynamic type system, which means code is checked only at execut
 
 TypeScript has a static type system, which means code is checked at compile-time. TypeScript **must** be compiled since it is not supported by browsers.
 The action of *stranspile* (which is a merge of the words *translate* and *compile*), converts the code from TypeScript to ES5 (old browsers) or ES6 (new browsers).
-Once the code is compiled, it's ready to run on the browser. 
+Once the code is compiled, it's ready to run on the browser.
+
+## Optional Chaining
+[Optional Chaining](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) was introduced in TypeScript 3.7.
+
+It allows us to avoid errors while accessing a property of an object that could be `null`.
+
+```ts
+const foo = (dog) => {
+    console.log(dog.name);
+}
+
+foo(null);
+```
+
+This will lead to: `Uncaught TypeError: dog is null`
+
+You can check if an `if` clause like this:
+```ts
+const foo = (dog) => {
+    if (dog) {
+        console.log(dog.name);
+    }
+}
+
+foo(null);
+```
+
+This will lead to no message on the Console.
+
+Or you can use the optional chaining like below:
+```ts
+const foo = (dog) => {
+    console.log(dog?.name);
+}
+
+foo(null);
+```
+
+This will lead to an `undefined` shown in the Console.
