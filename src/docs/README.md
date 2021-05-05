@@ -20,6 +20,15 @@ TypeScript has a static type system, which means code is checked at compile-time
 The action of *stranspile* (which is a merge of the words *translate* and *compile*), converts the code from TypeScript to ES5 (old browsers) or ES6 (new browsers).
 Once the code is compiled, it's ready to run on the browser.
 
+## Type Inference
+If you declare a variable by initializing it, you inferred it. If you then try to change its type with another assignment, you'll get a compile-error.
+
+```ts
+let dog = "Willy";
+dog = 123;
+// TS2322: Type '123' is not assignable to type 'string'.
+```
+
 ## Optional Chaining
 [Optional Chaining](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) was introduced in TypeScript 3.7.
 
@@ -58,3 +67,5 @@ foo(null);
 ```
 
 This will lead to an `undefined` shown in the Console.
+
+
